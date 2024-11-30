@@ -1,0 +1,77 @@
+body {
+    user-select: none;
+    font-family: 'Press Start 2P', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    background: linear-gradient(to right, #303030, #3a3a3a);
+    color: #fff;
+    text-align: center;
+    margin: 0; /* Ensure there's no margin on the body */
+    padding: 0; /* Ensure there's no padding on the body */
+}
+
+.topbar {
+    background:  #292929;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Make the topbar span the full width */
+    margin: 0; /* Ensure there's no margin on the topbar */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.topbar h1 {
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 2px 2px #000;
+    color: #fff;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+.plusOne {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    opacity: 0;
+    animation: fadeOut 2s forwards;
+    user-select: none; 
+    pointer-events: none; 
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(-50px);
+    }
+}
+
+.center img{
+    cursor: pointer;
+    height: auto;
+    transition: transform 0.2s;
+}
+

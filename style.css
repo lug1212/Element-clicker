@@ -5,17 +5,17 @@ body {
     background: linear-gradient(to right, #303030, #3a3a3a);
     color: #fff;
     text-align: center;
-    margin: 0; /* Ensure there's no margin on the body */
-    padding: 0; /* Ensure there's no padding on the body */
+    margin: 0; 
+    padding: 0; 
 }
 
 .topbar {
-    background:  #292929;
+    background: #292929;
     padding: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    width: 100%; /* Make the topbar span the full width */
-    margin: 0; /* Ensure there's no margin on the topbar */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 100%; 
+    margin: 0; 
+    box-sizing: border-box; 
 }
 
 .topbar h1 {
@@ -24,6 +24,31 @@ body {
     text-shadow: 2px 2px #000;
     color: #fff;
 }
+
+.topbar button {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.topbar button:hover {
+    background-color: #696969;
+    transform: scale(1.05); 
+}
+
+button img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -33,17 +58,19 @@ body {
 }
 
 button {
-    background-color: #ff4500;
+    background-color: #696969;
     color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #ff6347;
+    transform: scale(1.05);
 }
 
 .plusOne {
@@ -69,9 +96,8 @@ button:hover {
     }
 }
 
-.center img{
+.center img {
     cursor: pointer;
     height: auto;
     transition: transform 0.2s;
 }
-

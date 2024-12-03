@@ -131,3 +131,4 @@ document.getElementById('element').addEventListener('click', onclicked);
 
 // Intervals
 intervalId = setInterval(Aps, delay); // Set initial interval
+//change fr

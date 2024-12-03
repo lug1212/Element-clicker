@@ -1,5 +1,6 @@
 // Variables
-let money = 99999;
+let adminpass = 'lugmansthegoat';
+let money = 0;
 let gain = 1;
 let gainpersecond = 0;
 let delay = 1000;
@@ -15,8 +16,16 @@ function Aps(){
     money += gainpersecond;
     document.querySelector('.money').innerText = 'Quartz: ' + money;
 }
+function admin() {
+    password = prompt('Enter the password: ');
+    if (password == adminpass) {
 
+        money += 99999
+        gain += 100
+    }
+}
 // Event listeners
+document.querySelector('.admin').addEventListener('click', admin)
 document.getElementById('upgrade1').addEventListener('click', function(e) {
     const cost = 1000;
     if (money >= cost) {

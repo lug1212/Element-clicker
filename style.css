@@ -133,7 +133,7 @@ button:hover {
 }
 .shop , .upgrades{
     border: solid 1px ;
-    height: 100vh;
+    height: 100%;
     width: 25vb;
 }
 .shop button, .upgrades button{

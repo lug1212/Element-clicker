@@ -7,6 +7,7 @@
     <title>Element Clicker</title>
 </head>
 <body>
+    <audio id="click-sound" src="Sounds/Click.mp3"></audio>
     <div class="topbar">
         <button class="admin">admin</button>
         <h1>Element Clicker</h1>
@@ -14,11 +15,13 @@
         <h1 class="aps">persecond: <br> 0</h1>
         <button id="toggleShop">Toggle Shop</button>
     </div>
+
     <div class="container">
         <div class="upgrades">
             <h2>Upgrades</h2>
-            <button id="upgrade1">All Quarks<br>$1000</button> 
+            <button id="upgrade1">All Quarks<br>$500</button> 
             <button id="upgrade2">tiny bot boost<br>$2000</button>
+            <button id="upgrade3">Atomic Fusion<br>$25000</button>
         </div>
         <div class="center">
             <button id="element"><img src="images/drawing.svg" alt=""></button>
@@ -26,10 +29,10 @@
         </div>
         <div class="shop">
             <h2>Shop</h2>
-            <button id="buyElement"><img src="images/1st-item.svg" alt=""><br>tiny bot<br>$25</button>
-            <br><button id="ejminer">quartz extractor<br>$250</button>
-            <br><button id="Bbot">Big bot<br>$1000</button>
-            <br><button id="Gbot">Giant bot<br>$10000</button>
+            <button id="buyElement" data-cost="25" data-count="0"><img src="images/1st-item.svg" ><br>Tinybot<br>$25</button>
+            <br><button id="ejminer" data-cost="250" data-count="0">quartz extractor<br>$250</button>
+            <br><button id="Bbot" data-cost="1000" data-count="0">Big bot<br>$1000</button>
+            <br><button id="Gbot" data-cost="10000" data-count="0">Giant bot<br>$10000</button>
         </div>
         <div class="footer">
             

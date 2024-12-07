@@ -169,6 +169,9 @@ button:hover {
     border-radius: 5%;
     width: 75%;
 }
+.buyElement:hover{
+    
+}
 .shop button:hover, .upgrades button:hover{
     background-color: #ff6347;
     transform: scale(1.05);

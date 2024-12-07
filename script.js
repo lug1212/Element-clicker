@@ -31,8 +31,10 @@ function admin() {
 }
 
 // Event listeners
+
 document.querySelector('.admin').addEventListener('click', admin);
 
+//upgrades
 document.getElementById('upgrade1').addEventListener('click', function(e) {
     const cost = 500;
     if (money >= cost) {
@@ -51,6 +53,16 @@ document.getElementById('upgrade2').addEventListener('click', function(e) {
         document.getElementById('upgrade2').style.display = 'none';
         document.querySelector('.money').innerText = 'Quarks: \n' + money;
         document.querySelector('.aps').innerText = 'Persecond \n' + gainpersecond;
+    }
+});
+document.getElementById('upgrade3').addEventListener('click', event => {
+    let cost  = 10000
+    if (money >= cost) {
+        money -= cost;
+        gain *= 2
+        document.getElementById('upgrade3').style.display = 'none';
+        document.querySelector('.money').innerText = '' + cost;
+        document.getElementById('Elementimg').src = 'images/Helium.svg';
     }
 });
 
@@ -94,7 +106,7 @@ document.getElementById('element').addEventListener('click', function(event) {
         document.body.removeChild(quark1); // Remove the quark1 element after animation
     }, 2500); // Adjust the duration to match your animation
 });
-
+// shop items
 document.getElementById('ejminer').addEventListener('click', function(event) {
     let button = event.target;
     let cost = parseFloat(button.getAttribute('data-cost')) || 250; // Initial cost if not set
@@ -104,7 +116,7 @@ document.getElementById('ejminer').addEventListener('click', function(event) {
         cost = cost + (cost * 0.10); // Increase cost by 10%
         cost = Math.round(cost); // Round to the nearest whole number
         button.setAttribute('data-cost', cost); // Store the new cost
-        button.innerText = 'EJMiner \n' + cost; // Update button text
+        button.innerText = 'QuartExtractor \n' + cost; // Update button text
         document.querySelector('.money').innerText = 'Quarks: \n' + money;
         document.querySelector('.aps').innerText = 'Persecond \n' + gainpersecond;
     }
@@ -130,13 +142,30 @@ document.getElementById('Bbot').addEventListener('click', event => {
     let cost = parseFloat(button.getAttribute('data-cost')) || 1000; // Initial cost if not set
     if (money >= cost) {
         money -= cost;
-        gainpersecond += 50;
+        gainpersecond += 25;
         cost += cost * 0.20; // Increase cost by 20%
         cost = Math.round(cost); // Round to the nearest whole number
         button.setAttribute('data-cost', cost); // Store the new cost
-        button.innerText = 'BBot \n' + cost; // Update button text
+        button.innerText = 'Bigbot \n' + cost; // Update button text
         document.querySelector('.money').innerText = 'Quarks: \n' + money;
         document.querySelector('.aps').innerText = 'Persecond \n' + gainpersecond;
+    }
+});
+document.getElementById('Gbot').addEventListener('click', event => {
+    let button = event.target;
+    let cost = parseFloat(button.getAttribute('data-cost')) || 10000;
+    if (money >= cost) {
+        money -= cost;
+        gainpersecond += 100;
+        cost += cost * 0.20; // Increase cost by 20%
+        cost = Math.round(cost); //
+        button.setAttribute('data-cost', cost); // Store
+        button.innerText = 'Giantbot \n' + cost;
+        document.querySelector('.money').innerText = 'Quarks: \n' + money;
+        document.querySelector('.aps').innerText = 'Persecond \n' + gainpersecond;
+    }
+    else{
+        alert('not enough Quarks')
     }
 });
 

@@ -85,17 +85,42 @@ button:hover {
     transform: scale(1.05);
 }
 
-.plusOne {
+.quarkup1 {
+    width: 10px; /* Adjust size as needed */
+    height: 10px; /* Adjust size as needed */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    opacity: 0;
-    animation: fadeOut 2s forwards;
+    transition: transform 0.5s ease-in-out, opacity 2s ease-out;
     user-select: none;
     pointer-events: none;
 }
+
+.plusOne {
+    position: absolute;
+    font-size: 20px;
+    color: green;
+    animation: moveRandomlyAndFade 2.5s forwards;
+    user-select: none;
+    pointer-events: none;
+}
+
+@keyframes moveRandomlyAndFade {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(var(--random-x, 0)); /* Using CSS variable for random */
+    }
+    50% {
+        transform: translateY(-50px); /* Move up */
+    }
+    100% {
+        transform: translateY(100px); /* Move down */
+        opacity: 0;
+    }
+}
+
+
 
 @keyframes fadeOut {
     0% {
@@ -108,30 +133,7 @@ button:hover {
     }
 }
 
-@keyframes moveRandomlyAndFade {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  25% {
-    transform: translateX(calc(-50px + 50px * random())); /* Move left or right randomly */
-  }
-  50% {
-    transform: translateY(-50px); /* Move up */
-  }
-  100% {
-    transform: translateY(100px); /* Move down */
-    opacity: 0;
-  }
-}
 
-.quarkup1 {
-  position: absolute;
-  animation: moveRandomlyAndFade 2s forwards; /* Duration and forwards to keep the final state */
-  width: 1%;
-  user-select: none;
-  pointer-events: none;
-}
 
 
 

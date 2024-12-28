@@ -73,7 +73,9 @@ loadGame();
 setInterval(saveGame, 10000); // Save every 10 seconds
 
 function playclick() {
+    clicksound.currentTime = 0;
     clicksound.play();
+    console.log("Quark clicked!");
 }
 
 function onclicked() {
@@ -102,6 +104,7 @@ function admin() {
 }
 
 // Event listeners
+document.getElementById('element').addEventListener('click', onclicked)
 document.querySelector('.admin').addEventListener('click', admin);
 
 document.getElementById('upgrade1').addEventListener('click', function (e) {
@@ -141,9 +144,12 @@ document.getElementById('upgrade3').addEventListener('click', event => {
 
 document.getElementById('element').addEventListener('click', function (event) {
     const plusOneContainer = document.createElement('div');
-    const quark1 = document.createElement('img');
+    const quark1 = document.createElement('img'); //first quark effect
     quark1.src = 'images/Quarkup.svg';
     quark1.className = 'quarkup1';
+    const quark2 = document.createElement('img'); //first quark effect
+    quark2.src = 'images/Quarkup2.svg';
+    quark2.className = 'quarkup2';
     plusOneContainer.textContent = '+' + gain;
     plusOneContainer.className = 'plusOne';
     document.body.appendChild(plusOneContainer);

@@ -91,7 +91,7 @@ function Aps() {
     document.querySelector('.money').innerText = 'Quarks: \n' + money;
     console.log("Money per second:", money);
 }
-
+setInterval(Aps,1000)
 
 function admin() {
     const adminpass = 'no';
